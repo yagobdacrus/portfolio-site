@@ -1,0 +1,16 @@
+# Ignorar dependências
+node_modules/
+
+# Arquivos sensíveis
+.env
+
+# Logs
+*.log
+
+# Pastas de build
+/dist/
+/build/
+
+/Outros sistemas
+.DS_Store
+Thumbs.db

@@ -1,16 +1,16 @@
-# Ignorar dependências
-node_modules/
-
-# Arquivos sensíveis
-.env
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
 
 # Logs
 *.log
 
-# Pastas de build
-/dist/
-/build/
+# Arquivos de backup/salvos automaticamente por editores
+*.tmp
+*.bak
+*.swp
+*~
 
-/Outros sistemas
-.DS_Store
-Thumbs.db
+# Pastas de build (se usar ferramentas no futuro)
+dist/
+build/

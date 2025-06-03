@@ -42,3 +42,32 @@ const mobileNavbar = new MobileNavbar(
   ".nav-list li",
 );
 mobileNavbar.init();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".nav-list a");
+  const sections = document.querySelectorAll(".section, .hero");
+
+  function showSection(id) {
+    sections.forEach((section) => {
+      section.classList.remove("active");
+    });
+
+    const target = document.querySelector(id);
+    if (target) {
+      target.classList.add("active");
+    }
+  }
+
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute("href");
+      showSection(targetId);
+    });
+  });
+
+  // Mostra a seção "home" por padrão
+  showSection("#home");
+});
+
+
